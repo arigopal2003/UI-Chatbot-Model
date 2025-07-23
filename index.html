@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Seya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Chatbot Container -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="img/Untitled design (1) (1) (2).png" class="logo" alt="Seyasoft Logo">
+            <h3>Chat with Seya</h3>
+            <button id="close-chat">✖</button>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box" id="chat-box">
+            <!-- Initial message will be added by JavaScript -->
+        </div>
+
+        <!-- Category Quick Replies -->
+        <div class="categories-container">
+            <button class="category-btn" data-message="web design">Web Design</button>
+            <button class="category-btn" data-message="web development">Web Development</button>
+            <button class="category-btn" data-message="mobile application">Mobile Apps</button>
+            <button class="category-btn" data-message="digital marketing">Digital Marketing</button>
+            <button class="category-btn" data-message="software development">Software Dev</button>
+            <button class="category-btn" data-message="artificial intelligence">AI Solutions</button>
+            <button class="category-btn" data-message="creative services">Creative Services</button>
+            <button class="category-btn" data-message="digital transformation">Digital Transformation</button>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Ask about our services..." autocomplete="off">
+                <button id="send-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    
+        <div class="chat-footer">
+            <span style="color: grey;">Powered by 
+                <img src="img/SEYA_SOFT_LOGO-01_(2)[1] 3 (1).png" alt="Seyasoft Logo" class="seyasoft-logo"> 
+                <span style="color: rgb(48, 48, 48); font-weight: bold;">Seyasoft</span>
+            </span>
+        </div>
+    </div>
+    
+    <!-- Chatbot Toggle Button -->
+    <button id="open-chat" class="chat-toggle-btn">
+        <img src="img/Untitled design (1) (1) (2).png" alt="Chat Icon">
+    </button>
+
+    <!-- JavaScript -->
+    <script src="chat.js"></script>
+
+</body>
+</html>

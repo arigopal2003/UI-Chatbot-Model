@@ -1,0 +1,313 @@
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #f98b4e;
+  --secondary-color: #FFE65A;
+  --accent-color: #fed858;
+  --text-color: #333333;
+  --light-bg: #ffffff;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+/* Chatbot Container */
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 85vh;
+    max-height: 600px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    background: var(--light-bg);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+/* Chat Header */
+.chat-header {
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 45px;
+    color: white;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Logo and Close Button */
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: white;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+#close-chat {
+    background: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#close-chat:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* Categories Container - Moved to top */
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px;
+    background: white;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Compact Category Buttons */
+.category-btn {
+    padding: 6px 10px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.category-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Chat Box - Clean white background */
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Message Wrappers */
+.message-wrapper {
+    display: flex;
+    max-width: 100%;
+}
+
+.user-wrapper {
+    justify-content: flex-end;
+}
+
+.bot-wrapper {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Messages */
+.message {
+    border-radius: 18px;
+    padding: 10px 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 18px 18px 0 18px;
+}
+
+.bot-message {
+    background: #f8f8f8;
+    color: var(--text-color);
+    border-radius: 0 18px 18px 18px;
+}
+
+.bot-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-right: 8px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Chat Input */
+.chat-input {
+    padding: 12px 15px;
+    background: white;
+    border-top: 1px solid #f0f0f0;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px 45px 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+#user-input:focus {
+    border-color: var(--primary-color);
+}
+
+#send-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+/* Chat Toggle Button */
+#open-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#open-chat img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .chat-container {
+        width: 95%;
+        right: 2.5%;
+        height: 90vh;
+        bottom: 10px;
+    }
+    
+    .category-btn {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+}
+
+/* Chat Footer Styling */
+.chat-footer {
+    padding: 8px 15px;
+    background: white;
+    font-size: 11px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-top: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.chat-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);
+}
+
+.seyasoft-logo {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.chat-footer span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.chat-footer b {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Hover effect for the logo */
+.chat-footer:hover .seyasoft-logo {
+    transform: rotate(15deg);
+}
+
+/* Pulse animation for the "Powered by" text */
+@keyframes subtlePulse {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 1; }
+}
+
+.chat-footer {
+    animation: subtlePulse 6s infinite;
+}
