@@ -9,76 +9,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const chatbotConfig = {
         responses: {
-            "hi": "Hi! I'm Seyasoft virtual assistant. How can I help you today?",
-            "hello": "Hello! How can I assist you at Seyasoft?",
-            "bye": "Goodbye! Have a productive day!",
-            "thanks": "You're welcome! If you need anything else, just ask.",
-            "services": "We offer Web Development, Mobile Apps, AI Solutions, ERP, CRM and more.",
-            "products": "Our flagship products include AI-powered CRM, HRMS, and Invoice Suite.",
-            "ai": "Our AI solutions include chatbots, image recognition, sentiment analysis, and more.",
-            "machine learning": "We provide supervised/unsupervised ML models for prediction and automation.",
-            "school software": "Our education suite includes attendance, fee tracking, timetable and LMS.",
-            "lms": "Our Learning Management System helps teachers, students, and admins manage online classes.",
-            "e-commerce": "Seyasoft builds scalable, mobile-friendly e-commerce websites with cart, checkout, and payment.",
-            "web app": "We create interactive web apps with Angular, React, and Django.",
-            "mobile app": "We develop Android and iOS apps using Flutter, React Native, or native code.",
-            "devops": "We support CI/CD pipelines, cloud monitoring, Docker, Kubernetes, and GitOps.",
-            "seo": "We help improve your website visibility with technical and on-page SEO.",
-            "portfolio": "See our work: www.seyasoftech.com/portfolio",
-            "about": getSeyasoftAbout(),
-            "contact": getContactInfo(),
-            "careers": "We're hiring! Send your resume to careers@seyasoftech.com or check www.seyasoftech.com/careers",
-            "support": "For support, email us at support@seyasoftech.com or call +91 9345910713",
-            "quote": "Request a free quote at www.seyasoftech.com/quote or email us."
+            
         },
         categories: {
             "web design": {
                 "title": "🎨 Web Design",
                 "description": "We create stunning UI/UX websites tailored to your brand.",
                 "button": "Learn More",
-                "link": "https://seyasoftnew.seyasoftech.com/web-design.php"
+                "link": 
             },
             "web development": {
                 "title": "🌐 Web Development",
                 "description": "We build secure, responsive and SEO-friendly web apps.",
                 "button": "Learn More",
-                "link": "https://seyasoftnew.seyasoftech.com/web-development.php"
+                "link":
             },
             "mobile application": {
                 "title": "📱 Mobile Apps",
                 "description": "Cross-platform and native mobile apps for all industries.",
                 "button": "Learn More",
-                "link": "https://seyasoftnew.seyasoftech.com/moblie-app-development.php"
+                "link": 
             },
             "digital marketing": {
                 "title": "📢 Digital Marketing",
                 "description": "Boost your online presence with our comprehensive marketing strategies.",
                 "button": "Learn More",
-                "link": "https://seyasoftnew.seyasoftech.com/digital-marketing.php"
+                "link": 
             },
             "software development": {
                 "title": "💻 Software Development",
                 "description": "Custom software solutions tailored to your business needs.",
                 "button": "Learn More",
-                "link": "https://seyasoftnew.seyasoftech.com/software-development.php"
+                "link": 
             },
             "artificial intelligence": {
                 "title": "🤖 Artificial Intelligence",
                 "description": "AI-powered solutions to transform your business operations.",
                 "button": "Learn More",
-                "link": "https://seyasoftnew.seyasoftech.com/artificial-intelligence.php"
+                "link": 
             },
             "creative services": {
                 "title": "🎭 Creative Services",
                 "description": "Professional design and branding services for your business.",
                 "button": "Learn More",
-                "link": "https://seyasoftnew.seyasoftech.com/creative-services.php"
+                "link": 
             },
             "digital transformation": {
                 "title": "🚀 Digital Transformation",
                 "description": "Modernize your business with our cutting-edge digital solutions.",
                 "button": "Learn More",
-                "link": "https://seyasoftnew.seyasoftech.com/digital-transformation.php"
+                "link": 
             }
         }
     };
@@ -121,11 +101,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function getSeyasoftAbout() {
-        return `**Seyasoft Technologies**  \nWe provide full-stack development, AI-driven apps, CRM/ERP, cloud hosting and industry-grade solutions. Based in Chennai.\n\nMore at: [seyasoftech.com](https://seyasoftnew.seyasoftech.com/)`;
+        return `**Technologies**  \nWe provide full-stack development, AI-driven apps, CRM/ERP, cloud hosting and industry-grade solutions. Based in Chennai.\n\nMore at: [.com](https://.com/)`;
     }
 
     function getContactInfo() {
-        return `**Contact Seyasoft**\n\n📧 enquiry@seyasoftech.com\n📞 +91 9345910713\n📍 Chennai, India\n[Visit Site](https://seyasoftnew.seyasoftech.com/)`;
+        return `**Contact**\n\n📧 enquiry@.com\n📞 +91 \n📍 Chennai, India\n[Visit Site](https:///)`;
     }
 
     function formatCategoryResponse(category) {
